@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 import React, { FormEventHandler, useContext, useState } from 'react';
 import { WithEvents, useEventHandler } from '../../ctx/Events';
-import { ChatContext, ChatStateManager } from './ChatStateManager';
 import { ChatMessageEvent, ChatMessageProto } from '../../services/chat';
 import {
   PeerConnectedEvent,
   PeerDiscoveredEvent,
 } from '../../services/chat/Signaling';
+import { ChatContext, ChatStateManager } from './ChatStateManager';
 
 export const ChatWindow: React.FC<{ peerId: string }> = ({ peerId }) => {
   return (
@@ -91,11 +91,6 @@ const ChatMessageWindow: React.FC = () => {
       <ChatTextArea value={messages.join('\n')} readOnly={true} />
     </>
   );
-};
-
-type PeerState = {
-  peerId: string;
-  state: boolean;
 };
 
 const PeerList = () => {

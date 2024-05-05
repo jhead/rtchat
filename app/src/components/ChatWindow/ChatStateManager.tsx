@@ -5,7 +5,7 @@ import React, {
   useState,
 } from 'react';
 import { EventsContext } from '../../ctx/Events';
-import { ChatEvents, ChatService } from '../../services/chat';
+import { ChatService } from '../../services/chat';
 
 export type ChatContext = {
   chatService?: ChatService;
